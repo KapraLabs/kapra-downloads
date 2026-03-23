@@ -4,7 +4,7 @@ Public distribution hub for Kapra desktop apps, browser installers, and extensio
 
 ## For users
 
-- **Web4 Browser** (Windows / macOS / Linux): use the download buttons on [kaprachain.com/web4/download](https://kaprachain.com/web4/download) or open the [Releases](https://github.com/KapraLabs/kapra-downloads/releases) page.
+- **Web4 Browser** (Windows / macOS; Linux when published): use the download buttons on [kaprachain.com/web4/download](https://kaprachain.com/web4/download) or open the [Releases](https://github.com/KapraLabs/kapra-downloads/releases) page. Current macOS DMG is **Apple Silicon** unless an Intel build is added separately.
 - **Web4 Chrome extension**: same site and releases; use the `.zip` where provided for “Load unpacked” installs.
 
 ## How it works
