@@ -3,7 +3,7 @@
   "updated": "2026-03-23",
   "web4Browser": {
     "windows": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/Kapra.Web4.Browser_0.1.0_x64_en-US.msi",
-    "mac": "",
+    "mac": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/Kapra.Web4.Browser_0.1.0_aarch64.dmg",
     "linux": ""
   },
   "web4Extension": {
