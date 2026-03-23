@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "updated": "2026-03-23",
   "web4Browser": {
-    "windows": "",
+    "windows": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/Kapra.Web4.Browser_0.1.0_x64_en-US.msi",
     "mac": "",
     "linux": ""
   },
   "web4Extension": {
-    "zip": ""
+    "zip": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/kapra-web4-extension-v1.0.0.zip"
   }
 }
