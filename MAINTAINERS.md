@@ -79,7 +79,7 @@ The desktop app checks **`kapra-web4-browser-update.json`** on launch (see `kapr
    npm run tauri:build
    ```
 
-   Upload the **NSIS updater zip** (not only the `.exe` installer), e.g. `KapraWeb4Browser_<version>_x64-setup.nsis.zip`, from `src-tauri/target/release/bundle/nsis/` to the **KapraLabs/kapra-downloads** GitHub Release for that version.
+   Upload the **NSIS updater zip** (not only the `.exe` installer), e.g. `KapraWeb4Browser_<version>_x64-setup.nsis.zip`, from `src-tauri/target/release/bundle/nsis/` to the **KapraLabs/kapra-downloads** GitHub Release for that version. The website’s `downloads-manifest.json` must use **Release tags that actually exist** (e.g. point Windows at `KapraWeb4Browser_0.1.0_…` on `v0.1.0` until you publish `v0.1.1` with new assets). If the updater zip is missing from a release, in-app updates to that URL will fail until you attach it.
 
 3. **Update manifest:** Edit **`kapra-web4-browser-update.json`** on `main`:
 

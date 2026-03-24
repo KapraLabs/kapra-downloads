@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "updated": "2026-03-24",
   "web4Browser": {
-    "windows": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.1/KapraWeb4Browser_0.1.1_x64_en-US.msi",
+    "windows": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/KapraWeb4Browser_0.1.0_x64_en-US.msi",
     "mac": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/KapraWeb4Browser_0.1.0_aarch64.dmg",
     "linux": ""
   },
