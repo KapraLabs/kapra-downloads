@@ -31,6 +31,12 @@ From `kapra-web4-extension`, produce a zip of the packaged extension (e.g. `dist
 
 Pushing commits (for example updates to `downloads-manifest.json` or `kapra-web4-browser-update.json`) **does not** create a new row on the **Releases** tab and **does not** upload installers. The Releases page only changes when someone **Drafts a new release**, picks or creates a **tag** (e.g. `v0.1.1`), **attaches binaries**, and clicks **Publish**. Until then, **Latest** stays on the previous tag (e.g. `v0.1.0`) even if `main` has moved forward.
 
+## Automated Windows release (kapra-web4-browser)
+
+The private **`KapraLabs/kapra-web4-browser`** repo includes **Release to kapra-downloads** (GitHub Actions). When you **push to `main`** and **`package.version`** in **`tauri.conf.json`** changed vs the previous commit, **or** you **push a `v*` tag** after aligning versions, the workflow builds Windows artifacts, **creates or updates** the matching **Release** on **this** repo (`kapra-downloads`), and **pushes manifest commits** to `main` here.
+
+Setup and operator steps: **`kapra-web4-browser` → `docs/RELEASE_AUTOMATION.md`**. You still attach **extension zip** (and optional macOS/Linux assets) manually to the new release if needed.
+
 ## 3. Create a GitHub Release here
 
 1. In **KapraLabs/kapra-downloads**, open **Releases** → **Draft a new release**.
