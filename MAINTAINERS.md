@@ -57,7 +57,7 @@ On Vercel (or similar) you can still set:
 - `NEXT_PUBLIC_WEB4_EXTENSION_ZIP_URL`
 - `KAPRA_DOWNLOADS_MANIFEST_URL` — alternate manifest URL (fork/staging)
 
-The Kapra **website** download API routes use: **env → latest GitHub Release on this repo → `downloads-manifest.json`**. Pin a URL with env when you need to override; otherwise publishing a new **Release** here is enough for the site to point users at the newest assets without editing the manifest first.
+The Kapra **website** download API routes use: **env → `downloads-manifest.json` → latest GitHub Release on this repo**. Keep `downloads-manifest.json` on `main` aligned with the installer URLs you want users to get (e.g. after bumping the browser version); GitHub “latest” is the fallback when a platform entry is empty. Pin a URL with env when you need to override.
 
 ## 6. Icons (Web4 Browser)
 
