@@ -57,7 +57,7 @@ On Vercel (or similar) you can still set:
 - `NEXT_PUBLIC_WEB4_EXTENSION_ZIP_URL`
 - `KAPRA_DOWNLOADS_MANIFEST_URL` — alternate manifest URL (fork/staging)
 
-Env wins over manifest; manifest wins over “guess from latest release.”
+The Kapra **website** download API routes use: **env → latest GitHub Release on this repo → `downloads-manifest.json`**. Pin a URL with env when you need to override; otherwise publishing a new **Release** here is enough for the site to point users at the newest assets without editing the manifest first.
 
 ## 6. Icons (Web4 Browser)
 
@@ -66,3 +66,25 @@ If you change branding, from `kapra-web4-browser` regenerate icons from the 1024
 ```bash
 npm run tauri icon src-tauri/icons/source-icon.png
 ```
+
+## 7. Web4 Browser auto-updates (Tauri updater)
+
+The desktop app checks **`kapra-web4-browser-update.json`** on launch (see `kapra-web4-browser` `src-tauri/tauri.conf.json` → `tauri.updater.endpoints`).
+
+1. **Signing key:** The **public** key is embedded in the app as base64 (Tauri `pubkey` field). The **private** key must be available only in maintainer/CI secrets as `TAURI_PRIVATE_KEY` (see [Tauri updater](https://v1.tauri.app/v1/guides/distribution/updater/)). If you rotate keys, update `pubkey` in `tauri.conf.json` and ship a new installer before publishing updates signed with the new key.
+
+2. **Release build:** From `kapra-web4-browser`, with `TAURI_PRIVATE_KEY` set:
+
+   ```bash
+   npm run tauri:build
+   ```
+
+   Upload the **NSIS updater zip** (not only the `.exe` installer), e.g. `KapraWeb4Browser_<version>_x64-setup.nsis.zip`, from `src-tauri/target/release/bundle/nsis/` to the **KapraLabs/kapra-downloads** GitHub Release for that version.
+
+3. **Update manifest:** Edit **`kapra-web4-browser-update.json`** on `main`:
+
+   - Set `"version"` to the new semver (must be **greater** than the build baked into users’ apps for them to be prompted).
+   - Set `"platforms"."windows-x86_64"."url"` to the **direct** asset URL of the `.nsis.zip`.
+   - Set `"signature"` to the **base64 encoding** of the full minisign `.sig` file text (UTF-8) for that zip. Tauri’s bundler may emit a `.sig` next to the zip when signing succeeds; otherwise sign the same zip with the same private key and base64-encode the signature file contents.
+
+4. **macOS / Linux:** Add `darwin-aarch64`, `darwin-x86_64`, and/or `linux-x86_64` entries when you publish signed updater bundles for those targets (see Tauri docs for bundle file names).

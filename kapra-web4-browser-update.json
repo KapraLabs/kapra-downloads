@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "notes": "Auto-update channel for Kapra Web4 Browser (Tauri). Bump version when you ship a newer signed NSIS updater zip.",
+  "pub_date": "2026-03-24T00:00:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHJzaWduIHNlY3JldCBrZXkKUlVSTHh3UlVYbjcxcHUvcnZRWWI5c1d6VnhoK1hwMlBPdzlQQlRpeHBTMks4UDQzbHBZQ3U3OTdwZGdTdGlLVDF5TWl1dEprVVdnM3ZJTUtWSjBHdHNJY3I5RUEwUnV4SGcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc0MzI5NDI1CWZpbGU6c3JjLXRhdXJpXHRhcmdldFxyZWxlYXNlXGJ1bmRsZVxuc2lzXEthcHJhV2ViNEJyb3dzZXJfMC4xLjBfeDY0LXNldHVwLm5zaXMuemlwCXByZWhhc2hlZApFbDMyZFRZbVoxZkFCVzdYeElZZm5NY3RydytOeS95UVM1dHdXNUptM29EQ0orc3RwdjZvb3RTRG52VWpYR3I3c2xSeUttSUVjc3g1emdnUGE0NzVCdz09",
+      "url": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/KapraWeb4Browser_0.1.0_x64-setup.nsis.zip"
+    }
+  }
+}
