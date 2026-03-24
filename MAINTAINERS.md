@@ -27,6 +27,10 @@ Bundled app id / filenames use **`KapraWeb4Browser`** (no spaces) so macOS `bund
 
 From `kapra-web4-extension`, produce a zip of the packaged extension (e.g. `dist/` or Chrome Web Store–ready folder). Name it clearly, e.g. `kapra-web4-extension-0.1.0.zip`.
 
+## Commits on `main` are not a Release
+
+Pushing commits (for example updates to `downloads-manifest.json` or `kapra-web4-browser-update.json`) **does not** create a new row on the **Releases** tab and **does not** upload installers. The Releases page only changes when someone **Drafts a new release**, picks or creates a **tag** (e.g. `v0.1.1`), **attaches binaries**, and clicks **Publish**. Until then, **Latest** stays on the previous tag (e.g. `v0.1.0`) even if `main` has moved forward.
+
 ## 3. Create a GitHub Release here
 
 1. In **KapraLabs/kapra-downloads**, open **Releases** → **Draft a new release**.
