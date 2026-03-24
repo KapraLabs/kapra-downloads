@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-03-23",
+  "updated": "2026-03-24",
   "web4Browser": {
-    "windows": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/KapraWeb4Browser_0.1.0_x64_en-US.msi",
-    "mac": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/KapraWeb4Browser_0.1.0_aarch64.dmg",
+    "windows": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.1/KapraWeb4Browser_0.1.1_x64_en-US.msi",
+    "mac": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.1/KapraWeb4Browser_0.1.1_aarch64.dmg",
     "linux": ""
   },
   "web4Extension": {
-    "zip": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.0/kapra-web4-extension-v1.0.0.zip"
+    "zip": "https://github.com/KapraLabs/kapra-downloads/releases/download/v0.1.1/kapra-web4-extension-v1.0.0.zip"
   }
 }
