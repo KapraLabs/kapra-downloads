@@ -4,6 +4,7 @@
 
 - **`kapra-downloads` is public.** Do not reference private URLs that require auth.
 - Prefer attaching binaries to a **GitHub Release in this repo**, then pointing `downloads-manifest.json` at the resulting asset URLs.
+- **End-user links** in README and marketing should point to **kaprachain.com** (`/download`, `/web4/download`, `/web4/all-releases`), not the GitHub Releases tab (which lists source archives). See **`kapra-website/docs/PUBLIC_DOWNLOADS_AND_RELEASES.md`** for the audited site map.
 
 ## 1. Web4 Browser installers
 

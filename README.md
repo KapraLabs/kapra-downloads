@@ -4,8 +4,8 @@ Public distribution hub for Kapra desktop apps, browser installers, and extensio
 
 ## For users
 
-- **Web4 Browser** (Windows / macOS; Linux when published): use the download buttons on [kaprachain.com/web4/download](https://kaprachain.com/web4/download) or open the [Releases](https://github.com/KapraLabs/kapra-downloads/releases) page. Current macOS DMG is **Apple Silicon** unless an Intel build is added separately.
-- **Web4 Chrome extension**: same site and releases; use the `.zip` where provided for “Load unpacked” installs.
+- **Web4 Browser** (Windows / macOS; Linux when published): use [kaprachain.com/web4/download](https://kaprachain.com/web4/download) and the on-site binary catalog [kaprachain.com/web4/all-releases](https://kaprachain.com/web4/all-releases) (same-origin redirects; no GitHub Releases UI). Current macOS DMG is **Apple Silicon** unless an Intel build is added separately.
+- **Web4 Chrome extension**: same pages; use the `.zip` via the site redirect or store when listed.
 
 ## How it works
 
@@ -23,3 +23,5 @@ Public distribution hub for Kapra desktop apps, browser installers, and extensio
 ## Security
 
 Only publish artifacts you have built from trusted CI or signed release processes. Do not commit private keys or tokens.
+
+Validator releases on `releases.kaprachain.com` should ship a `SHA256SUMS` file next to the binaries; the website `install.sh` verifies against it when present.
